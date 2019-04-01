@@ -7,6 +7,7 @@ from celery import shared_task
 @shared_task
 def create_random_user_accounts(total):
     for i in range(total):
+        print("IIIII:", i)
         username = 'user_{}'.format(get_random_string(10, string.ascii_letters))
         email = '{}@example.com'.format(username)
         password = get_random_string(50)

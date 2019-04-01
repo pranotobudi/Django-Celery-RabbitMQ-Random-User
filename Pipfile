@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 flake8 = "*"
 celery = "*"
+gevent = "*"
 
 [requires]
 python_version = "3.7"

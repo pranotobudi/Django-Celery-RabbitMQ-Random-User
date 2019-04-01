@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from core.views import GenerateRandomUserView, UsersListView
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('generate/', GenerateRandomUserView.as_view(), name='generate'),
+    path('', UsersListView.as_view(), name='users_list'),
+
 ]
